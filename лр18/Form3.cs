@@ -16,9 +16,11 @@ namespace лр18
         // Строка подключения к базе данных
         private const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WolfGGO\Documents\pizza.mdf;Integrated Security=True;Connect Timeout=30";
 
+        Pizza pizza; // Объявление экземпляра класса Pizza
         public Form3()
         {
             InitializeComponent(); // Инициализация компонентов формы
+            pizza = new Pizza(); // Создание экземпляра класса Pizza
         }
 
         // Метод для заполнения комбобокса данными о районах из базы данных
@@ -111,7 +113,14 @@ namespace лр18
         // Обработчик загрузки формы
         private void Form3_Load(object sender, EventArgs e)
         {
-            FillDistrictsComboBox(); // Заполнение комбобокса данными о районах при загрузке формы
+            // Заполнение комбобокса данными о районах при загрузке формы
+            FillDistrictsComboBox();
+
+            // Заполнение комбобокса именами пицц
+            Pizza.FillPizzaComboBox(comboBox1);
+
+            // Заполнение комбобокса размерами пицц
+            Pizza.FillPizzaSizeComboBox(comboBox2);
         }
     }
 }

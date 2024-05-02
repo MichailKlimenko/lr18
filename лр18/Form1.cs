@@ -16,9 +16,11 @@ namespace лр18
         // Строка подключения к базе данных
         private const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WolfGGO\Documents\pizza.mdf;Integrated Security=True;Connect Timeout=30";
 
+        User user;
         public Form1()
         {
             InitializeComponent(); // Инициализация компонентов формы
+            user = new User();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +42,12 @@ namespace лр18
                 {
                     Form3 form3 = new Form3(); // Создание экземпляра Form3
                     form3.Show(); // Отображение Form3
+
+                    // Создаем объект пользователя
+                    User user = new User();
+                    user.Username = username;
+                    // Выводим приветствие пользователю
+                    user.GreetUser();
                 }
                 else
                 {
@@ -76,6 +84,12 @@ namespace лр18
             }
 
             return count > 0; // Возвращение результата проверки (true, если пользователь найден; false, если нет)
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
         }
     }
 }

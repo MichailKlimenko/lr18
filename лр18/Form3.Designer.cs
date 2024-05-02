@@ -63,9 +63,6 @@ namespace лр18
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "20 см",
-            "30 см"});
             this.comboBox2.Location = new System.Drawing.Point(62, 102);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -100,10 +97,6 @@ namespace лр18
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Классическая",
-            "Грибная",
-            "Сырная"});
             this.comboBox1.Location = new System.Drawing.Point(62, 62);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
